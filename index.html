@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no"/>
+    <title>sarah</title>
+    <link type="text/css" rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<div id="main">
+    <ul id="list">
+        <li  class="zIndex">
+            <div class="a1">
+                <div><p>个人简历</p></div>
+                <div><p>Personal Resume</p></div>
+                <div></div>
+                <div></div>
+            </div>
+        </li>
+        <li >
+            <div class="a2">
+                <div class="job"><p>I WANT A</p><p>JOB</p></div>
+                <div class="name"><p>王莹</p></div>
+                <div class="info">
+                    <div><p>SCHOOL</p><p>河北工业大学 2011级专科</p></div>
+                    <div><p>MAJOR</p><p>计算机系 软件专业</p></div>
+                    <div><p>E-MAIL</p><p>731777353@qq.com</p></div>
+                    <div><p>PHONE</p><p>15321885096</p></div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="a3">
+                <span>我的技能</span>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </li>
+        <li>
+            <div class="a4">
+                <div class="change"><span>应变力 90</span></div>
+                <div class="study"><span>学习力95</span></div>
+                <div class="hard"><span>勤快度95</span></div>
+                <div class="do"><span>执行力95</span></div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+
+    function getEle(ele) {
+        return document.querySelector(ele);
+    }
+    var main = getEle("#main");
+    var list = getEle("#list");
+    var winW = document.documentElement.clientWidth;
+    var winH = document.documentElement.clientHeight;
+    var desW = 640, desH = 1008;
+    if (winH / desH <= winW / desW) {
+        main.style.webkitTransform = "scale(" + winW / desW + ")";
+    } else {
+        main.style.webkitTransform = "scale(" + winH / desH + ")";
+    }
+    var oLis = document.querySelectorAll("#list>li");
+    window.onload=function(){
+       oLis[0].firstElementChild.id="a1";
+    };
+
+    [].forEach.call(oLis,function(){
+        var oLi = arguments[0];
+        oLi.index = arguments[1];
+        oLi.addEventListener("touchstart",start,false);
+        oLi.addEventListener("touchmove",move,false);
+        oLi.addEventListener("touchend",end,false);
+    });
+    function start(e){
+        this.startX = e.changedTouches[0].pageY;
+    }
+    function move(e){
+        this.flag = true;
+        var moveTouch = e.changedTouches[0].pageY;
+        var movePos = moveTouch-this.startX;
+        var index = this.index;
+        [].forEach.call(oLis,function(){
+            arguments[0].className = "";
+            if(arguments[1]!=index){
+                arguments[0].style.display = "none"
+            }
+           arguments[0].firstElementChild.id="";
+
+        });
+        if(movePos>0){//往下走 找上一张
+            this.prevSIndex = (index === 0?oLis.length-1:index-1);
+            var duration = -winH+movePos;
+        }else if(movePos<0){
+            this.prevSIndex = (index === oLis.length-1?0:index+1);
+            var duration = winH+movePos;
+        }
+        this.style.webkitTransform = "translate(0,"+movePos+"px)";
+        oLis[this.prevSIndex].style.webkitTransform = "translate(0,"+duration+"px)";
+        oLis[this.prevSIndex].className = 'zIndex';
+        oLis[this.prevSIndex].style.display ="block";
+    }
+    function end(e){
+        if(this.flag){
+            oLis[this.prevSIndex].style.webkitTransform = "translate(0,0)";
+            oLis[this.prevSIndex].style.webkitTransition = "0.5s ease-out";
+            oLis[this.prevSIndex].addEventListener("webkitTransitionEnd",function(e){
+                if(e.target.tagName =="LI"){
+                    this.style.webkitTransition = "";
+                }
+              this.firstElementChild.id="a"+(this.index+1);
+            },false)
+        }
+    }
+    document.addEventListener("touchmove",function(e){
+
+    },false);
+
+</script>
+</body>
+</html>
