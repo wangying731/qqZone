@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>QQ空间</title>
+    <link type="text/css" rel="stylesheet" href="css/top-container.css"/>
+    <link type="text/css" rel="stylesheet" href="css/body-container.css"/>
+</head>
+<body>
+<div class="top-container" id="top-container">
+    <div class="option" id="option">
+        <a class="logo" href="javascript:;" title="QQ空间" target="_self"></a>
+        <ul class="top-nav" id="top-nav">
+            <li class="nav-list" id="tb_ic_li">
+                <div class="nav-list-inner">
+                    <a class="nav-hover selectBg" href="javascript:;">
+                        <i class="top-nav-icon icon-iCenter"></i>
+                        <span>个人中心</span>
+                    </a></div>
+            </li>
+            <li class="nav-list" id="tb_index_li">
+                <div class="nav-list-inner"><a href="javascript:;" class="aMainPage"><i
+                        class="top-nav-icon icon-homepage"></i><span>我的主页</span><i class="drop-down"></i></a></div>
+                <div class="nav-drop-down" style="display:none;">
+                    <div class="side-area">
+                        <div class="homepage-link">
+                            <a class="link-icon" href="javascript:;"><i class="icon-home"></i></a><a
+                                class="link-text" href="javascript:;">主页</a>
+                        </div>
+                    </div>
+                    <div class="main-area">
+                        <div class="main-application">
+                            <ul class="main-application-list" id="homepage-list">
+                                <li><a href="javascript:;"><i class="icon-blog"></i></a><a class="link-app">日志</a></li>
+                                <li><a href="javascript:;"><i class="icon-photo"></i></a><a class="link-app">相册</a></li>
+                                <li><a href="javascript:;"><i class="icon-say"></i></a><a class="link-app">说说</a></li>
+                                <li><a href="javascript:;"><i class="icon-share"></i></a><a class="link-app">分享</a></li>
+                                <li><a href="javascript:;"><i class="icon-time-line"></i></a><a class="link-app">时光轴</a>
+                                </li>
+                                <li><a href="javascript:;"><i class="icon-video"></i></a><a class="link-app">视频</a></li>
+                                <li><a href="javascript:;"><i class="icon-music"></i></a><a class="link-app">音乐</a></li>
+                                <li><a href="javascript:;"><i class="icon-message-book"></i></a><a
+                                        class="link-app">留言板</a></li>
+                                <li><a href="javascript:;"><i class="icon-personal"></i></a><a class="link-app">个人档</a>
+                                </li>
+                                <li><a href="javascript:;"><i class="icon-collect"></i></a><a class="link-app">收藏</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-list" id="tb_friend_li">
+                <div class="nav-list-inner">
+                    <a href="javascript:;" class="aMyFriends"><i class="top-nav-icon icon-friend"></i>
+                        <span>好友</span><i class="drop-down"></i>
+                        <span class="new-friends-num">1</span>
+                    </a></div>
+                <div class="nav-drop-down friends-drop-down" style="display:none;">
+                    <div class="side-area">
+                        <div class="friends-link">
+                            <a href="javascript:" class="link-icon"><i class="icon-friends"></i></a>
+                            <a href="javascript:" class="link-text">寻找好友</a>
+                        </div>
+                        <div class="friends-relation">
+                            <a href="javascript:" class="link-icon"><i class="icon-relation"></i></a>
+                            <a href="javascript:" class="link-text">亲密度</a>
+                        </div>
+                    </div>
+                    <div class="main-area">
+                        <div class="friends-outer">
+                            <div class="friends-inner">
+                                <div class="hd">
+                                    <h3>最近联络的好友</h3>
+
+                                    <div class="friends-search-bar ">
+                                        <input type="text" placeholder="搜索好友">
+                                        <button><i class="top-nav-icon icon-friend-search"></i></button>
+                                        <!--<div class="friends-results-topbar" style="display:none">-->
+                                        <!--<ul class="results-list-topbar qz-scrollbar" id="search_friend_result"></ul>-->
+                                        <!--<p class="null" style="display:none">没有找到相关用户</p>-->
+                                    </div>
+                                </div>
+                                <div class="bd">
+                                    <ul class="main-friends-list" id="main-friends-list"></ul>
+                                </div>
+                                <div class="ft" id="friends-inner-ft"><p><a href="javascript:;">最近添加的好友<span
+                                        class="new-friends"></span></a>
+                                </p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-list" id="tb_app_li">
+                <div class="nav-list-inner"><a href="javascript:;" class="aAppStore"><i
+                        class="top-nav-icon icon-application"></i><span>应用</span><i
+                        class="drop-down"></i></a></div>
+                <div class="nav-drop-down application-drop-down" style="display:none;">
+                    <div class="side-area">
+                        <div class="application-shop">
+                            <a class="link-icon" href="javascript:;"><i class="icon-shop"></i></a>
+                            <a class="link-text" href="javascript:;">积分商城</a>
+                        </div>
+
+                        <div class="application-gift">
+                            <a class="link-icon" href="javascript:;"><i class="icon-gift"></i><i class="icon-prize"></i></a>
+                            <a class="link-text" href="javascript:;">每日礼包</a>
+                        </div>
+                        <div class="application-game">
+                            <a class="link-icon" href="javascript:;"><i class="icon-game"></i></a>
+                            <a class="link-text" href="javascript:;">找游戏</a>
+                        </div>
+                    </div>
+                    <div class="main-area">
+                        <div class="main-application">
+                            <ul class="main-application-list " id="appStore-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-list" id="tb_dress_li">
+                <div class="nav-list-inner">
+                    <a href="javascript:;" class="aDress">
+                        <i class="top-nav-icon icon-dress-up"></i><span>装扮</span>
+                        <i class="drop-down"></i></a></div>
+                <div class="nav-drop-down dress-drop-down" style="display:none;">
+                    <div class="side-area">
+                        <div class="fast-dress">
+                            <a class="link-icon" href="javascript:;"><i class="icon-fast-dress"></i></a>
+                            <a class="link-text" href="javascript:;">一键装扮</a>
+                        </div>
+                        <div class="dress-mall">
+                            <a class="link-icon"><i class="icon-dress-mall"></i></a>
+                            <a class=" link-text">装扮商城</a>
+                        </div>
+                    </div>
+                    <div class="main-area">
+                        <div class="dress-box">
+                            <div class="dress-menu" id="dress-menu">
+                                <a class="dress-menu-link hover">路过心灵的句子</a><span class="spe-line"></span>
+                                <a class="dress-menu-link">极速传说</a><span class="spe-line"></span>
+                                <a class="dress-menu-link">心已飞远</a><span class="spe-line"></span>
+                                <a class="dress-menu-link">新潮流</a>
+                            </div>
+                            <ul class="dress-list dress-select">
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u0-0.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u0-1.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u0-2.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u0-3.gif" alt=""/></a>
+                                </li>
+                            </ul>
+                            <ul class="dress-list">
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u3-0.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u3-1.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u3-2.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u3-3.gif" alt=""/></a>
+                                </li>
+                            </ul>
+                            <ul class="dress-list">
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u1-0.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u1-1.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u1-2.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u1-3.gif" alt=""/></a>
+                                </li>
+                            </ul>
+                            <ul class="dress-list">
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u2-0.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u2-1.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u2-2.gif" alt=""/></a>
+                                </li>
+                                <li><a class="dress-item" href="javascript:;"><img src="img/dress/u2-3.gif" alt=""/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="user-info">
+            <a class="user-home" href="javascript:;"><img src="img/user.jpg" alt="您的头像"/><span>小人家</span></a>
+            <a class="logout_new" href="javascript:;" title="退出"><i class="icon-logout"></i></a>
+
+            <div class="tb_setting" id="tb_setting_li"><i class="tb_setting_i"></i>
+                <b class="white-line"></b>
+
+                <div class="user-drop-down">
+                    <div class="drop-down-setting">
+                        <a href="javascript:;" title="修改资料">修改资料</a>
+                        <a href="javascript:;" title="主页排版">主页排版</a>
+                        <a href="javascript:;" title="空间设置">空间设置</a>
+                        <a href="javascript:;" title="权限设置">权限设置</a>
+                    </div>
+                    <a href="javascript:;" title="帮助中心">帮助中心</a>
+                    <a href="javascript:;" title="意见反馈">意见反馈</a>
+                </div>
+            </div>
+            <div class="vip_setting" id="vip_setting_li"><i class="vip_setting_i"></i>
+
+                <div class="vip-drop-down">
+                    <div class="drop-down-setting">
+                        <a href="javascript:;">开通黄钻</a>
+                        <a href="javascript:;">开年费黄钻</a>
+                        <a href="javascript:;">向好友索取</a>
+                        <a href="javascript:;">赠送给好友</a>
+                        <a href="javascript:;">黄钻官网</a>
+                    </div>
+                </div>
+                <b class="white-line"></b>
+            </div>
+        </div>
+        <div class="top_search">
+            <div class="search_box" id="search-box">
+                <input class="search_input" type="text" placeholder="用户/应用/动态">
+                <a class="search_button" href="javascript:;"><i class="icon_search"></i></a>
+            </div>
+            <div class="search_drop_down none">
+                <ul class="search_list">
+                    <li><a href="javascript:;">
+                        <i class="ui-icon icon-ts-special"></i>
+                        <span class="info">特别关心</span>
+                    </a></li>
+                    <li><a href="javascript:;">
+                        <i class="ui-icon icon-ts-qq"></i>
+                        <span class="info">可能认识的人</span>
+                    </a></li>
+                    <li><a href="javascript:;">
+                        <i class="ui-icon icon-ts-approve"></i>
+                        <span class="info">认证空间</span>
+                    </a></li>
+                    <li><a href="javascript:;">
+                        <i class="ui-icon icon-ts-app"></i>
+                        <span class="info">应用</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="music_container" id="tb_music_li" title="点击设置背景音乐">
+            <div class="music_panel">
+                <a class="music_play" href="javascript:;"><i class="icon_music_play" title="点击设置背景音乐"></i></a>
+                <a class="music_dynamic"><i class="icon_music_dynamic" title="点击设置背景音乐"></i></a>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="speed_btn"></a>
+</div>
+<div class="background-container">
+    <div class="layout-head">
+        <div class="layout-head-inner">
+            <div class="head-info">
+                <h1><span>蓼汀花溆</span><a href="javascript:;" class="qz-level-flag">
+                    <span class="qz-lv-3" title="当前空间等级：38级；积分：10178分">
+                        <span class="no">
+                            <b class="d3"></b>
+                            <b class="d8"></b>
+                        </span>
+                    </span></a></h1>
+
+                <div><span>时间啊时间,你慢些走······ </span></div>
+            </div>
+            <div class="head-detail">
+                <span class="head-detail-name">小人家</span>
+                <span class="head-detail-vip" title="开通黄钻"></span>
+            </div>
+            <div class="profile-hd-actions">
+                <a href="javascript:;" class="lnk-left" title="0人赞过">
+                    <s class="sp-btn-like"></s>
+                    <span class="good-num">0</span>
+                </a>
+            </div>
+            <div class="visit-module" id="visitorsDiv">
+                <div class="visit-inner">
+                    <i class="icon-visit"></i>
+
+                    <div class="other-info">
+                        <div class="today-wrapper">
+                            <p>今日访客<span class="count count-margin">0</span></p>
+
+                            <p>被挡访客<span class="count">228</span></p>
+                        </div>
+                        <div class="count-wrapper">
+                            <p>访客总量<span class="count">5688</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="visit-outer none">
+                    <a href="javascript:;" class="visit-hide">隐藏</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layout-nav">
+        <div class="layout-nav-inner">
+            <div class="head-avatar" id="head-avatar">
+                <!--<a href="javascript:;">-->
+                <div class="head-dress"></div>
+                <img src="img/avatar.jpg" alt="" class="user-avatar"/>
+
+                <div class="head-avatar-edit">
+                    <div class="avatar-edit-drop">
+                        <div class="title-bg none"></div>
+                        <a href="javascript:;" class="avatar-edit-title none">修改头像 <i class="drop-down-arrow none"></i>
+                        </a>
+                        <ul class="avatar-edit-list none">
+                            <li><a href="javascript:;">选择相册</a></li>
+                            <li><a href="javascript:;">本地上传</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--</a>-->
+            </div>
+            <div class="head-nav">
+                <ul class="head-nav-menu">
+                    <li><a href="javascript:;">主页</a></li>
+                    <li><a href="javascript:;">日志</a></li>
+                    <li><a href="javascript:;">相册</a></li>
+                    <li><a href="javascript:;">留言版</a></li>
+                    <li><a href="javascript:;">说说</a></li>
+                    <li><a href="javascript:;">个人档</a></li>
+                    <li><a href="javascript:;">音乐</a></li>
+                    <li><a href="javascript:;">时光轴</a></li>
+                    <li><a href="javascript:;">更多</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="layout-background">
+        <div class="layout-body">
+            <div class="pageContent">
+                <div class="left-menu">
+                    <div class="mod-side-nav mod-side-nav-message">
+                        <div class="inner">
+                            <ul class="sn-list">
+                                <li><a href="javascript:;"><i class="ui-icon sp-friend-feed"></i><span class="sn-title">好友动态</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-close-feed"></i><span class="sn-title">特别关心</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-at "></i><span
+                                        class="sn-title">与我相关</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-past-years"></i><span class="sn-title">那年今日</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app-center"></i><span class="sn-title">应用中心</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-fm"></i><span
+                                        class="sn-title">企业FM</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-show"></i><span
+                                        class="sn-title">QQ演出</span></a></li>
+                            </ul>
+                            <a href="javascript:;" id="tab_switch" class="more-toggle" title="展开">
+                                <i class="ui-icon sp-nav-l-down"></i>
+                            </a>
+                            <ul class="sn-list none">
+                                <li><a href="javascript:;"><i class="ui-icon sp-fav"></i><span
+                                        class="sn-title">我的收藏</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-weiYun"></i><span
+                                        class="sn-title">微云备份</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-qq-read"></i><span
+                                        class="sn-title">QQ阅读</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon ui-icon sp-trueName-friends"></i><span
+                                        class="sn-title">实名朋友</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-certified"></i><span class="sn-title">认证空间</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-dianPing"></i><span class="sn-title">吃喝玩乐</span><i
+                                        class="ui_icon icon_app_new"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mod-side-nav mod-side-nav-recently-used">
+                        <div class="inner">
+                            <ul class="sn-list">
+                                <li><a href="javascript:;"><i class="ui-icon sp-popularize"></i><span class="sn-title">CF英雄汇集！</span></a>
+                                </li>
+                                <!-- 以下3个是根据应用中前三个选的-->
+                                <li><a href="javascript:;"><i class="ui-icon sp-app1"></i><span
+                                        class="sn-title">小小村长</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app2"></i><span
+                                        class="sn-title">QQ农场</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app3"></i><span
+                                        class="sn-title">QQ牧场</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app4"></i><span
+                                        class="sn-title">风暴大陆</span><i class="ui_icon icon_app_recommend"></i></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app5"></i><span
+                                        class="sn-title">剑雨江湖</span><i class="ui_icon icon_app_recommend"></i></a></li>
+                            </ul>
+                            <a href="javascript:;" id="tab_app_switch" class="more-toggle" title="展开">
+                                <i class="ui-icon sp-nav-l-down"></i>
+                            </a>
+                            <ul class="sn-list none">
+                                <li><a href="javascript:;"><i class="ui-icon sp-app6"></i><span
+                                        class="sn-title">皇图(正版)</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app7"></i><span
+                                        class="sn-title">礼物</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app8"></i><span
+                                        class="sn-title">英雄令</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app9"></i><span
+                                        class="sn-title">斗龙OL  </span></a></li>
+                            </ul>
+                            <ul class="sn-list">
+                                <li><a href="javascript:;"><i class="ui-icon sp-shop"></i><span
+                                        class="sn-title">积分商城</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-gift"></i><span
+                                        class="sn-title">每日抽奖</span></a></li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-my-apps"></i><span class="sn-title">我的全部应用</span></a>
+                                </li>
+                                <li><a href="javascript:;"><i class="ui-icon sp-app10"></i><span
+                                        class="sn-title">傲战无双</span><i class="ui_icon icon_app_3d"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mod-side-advent" id="side-advent">
+                        <!--         <div class="advent-outer">
+                           <a href="javascript:;" class="btn-close"><i class="ui-icon icon-close"></i></a>
+                           <div class="advent-inner">
+                           <h3 class="advent-title">广告</h3>
+                           <img src="img/advert/0.jpg" alt=""/>
+                           <p class="ft"><a href="javascript:;">新款抢鲜，优惠1折进行中</a></p>
+                           </div>
+                           </div>
+                           <div class="advent-close-outer none" id="close-top">
+                           <div class="app-close">
+                           <h3 class="advent-title">广告</h3>
+                           <p class="close-done">广告已经关闭(<span class="timer">8</span>s)</p>
+                           <div class="why">
+                           <p>你认为该广告存在什么问题？</p>
+                           <ul><li class="close-list"><label for="radio1"><input type="radio" data-reason="2201" class="radio"/><span class="_js_type">频繁出现</span></label></li>
+                           <li class="close-list"><label for="radio1"><input type="radio" data-reason="2202" class="radio"><span class="_js_type"> 内容反感</span></label></li>
+                           <li class="close-list"><label for="radio1"><input type="radio" data-reason="2203" class="radio"><span class="_js_type"> 与我无关</span></label></li>
+                           <li class="close-list"><label for="radio1"><input type="radio" data-reason="2204" class="radio"><span class="_js_type"> 已购买</span></label></li>
+                           <li class="close-list"><label for="radio1"><input type="radio" data-reason="2205" class="radio"><span class="_js_type"> 虚假广告</span></label></li>
+                           </ul>
+                           <div class="hz">
+                           <a href="javascript:;">
+                           <i class="icon-hz">
+                           <i></i>
+                           </i>&nbsp;一键去广告</a></div>
+                           </div>
+                           </div>
+                           <div class="shield" style="height:200px width:200px; background:red">
+                               <p>感谢你的反馈！</p><a href="javascript:;">了解广告屏蔽规则&gt;</a>
+                           </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-main">
+                <div class="main-contain">
+                    <div class="post-container">
+                        <div class="hot-bar-wrap" id="hot-bar">
+                            <a href="javascript:;"><img src="./img/hot/0.jpg" alt=""/></a>
+                            <a href="javascript:;" class="close-x"></a>
+                        </div>
+                        <div class="qz-poster">
+                            <div class="qz-poster-inner">
+                                <div class="qz-poster-bd">
+                                    <div class="qz-input">
+                                        <div id="content" class="text-area tx-2 none" spellcheck="false"
+                                             contenteditable="true"></div>
+                                        <div id="initial-content" class="text-area">说点儿什么吧</div>
+                                    </div>
+                                    <div class="qz-input-side" id="qz-input-side">
+                                        <div class="attach">
+                                            <div class="attach-item">
+                                                <a href="javascript:;">
+                                                    <i class="icon icon-pic"></i>
+                                                </a>
+                                            </div>
+                                            <div class="attach-item">
+                                                <a href="javascript:;">
+                                                    <i class="icon icon-other"></i>
+                                                </a>
+                                            </div>
+                                            <div class="attach-item">
+                                                <a href="javascript:;">
+                                                    <i class="icon icon-funny"></i>
+                                                </a>
+                                                <i class="icon-new-fun"></i>
+                                            </div>
+                                        </div>
+                                        <div class="poster-drop-down img-drop none">
+                                            <div class="drop-box">
+                                                <ul class="list">
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-from-cmp"></i>
+                                                            <span class="txt">本地</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-photo"></i>
+                                                            <span class="txt">相册</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-shot"></i>
+                                                            <span class="txt">截屏</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-meitu"></i>
+                                                            <span class="txt">拼图</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="poster-drop-down other-drop none">
+                                            <div class="drop-box">
+                                                <ul class="list">
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-music"></i>
+                                                            <span class="txt">音乐</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-video"></i>
+                                                            <span class="txt">视频</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="poster-drop-down funny-drop none">
+                                            <div class="drop-box">
+                                                <ul class="list">
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-qutu"></i>
+                                                            <span class="txt">趣图</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-template"></i>
+                                                            <span class="txt">气泡</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-qutu-emo"></i>
+                                                            <span class="txt">表情</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;">
+                                                            <i class="icon icon-flash-img"></i>
+                                                            <span class="txt">闪图</span>
+                                                        </a>
+                                                        <i class="icon-new-fun"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qz-poster-ft none" id="qz-poster-ft">
+                                    <div class="qz-poster-attach">
+                                        <div class="qzaddons">
+                                            <a class="emot" href="javascript:;" title="插入表情">
+                                                <i class="icon icon-emot"></i></a>
+                                            <a class="at" href="javascript:;" title="提到好友" data-hottag="attachbar.at">
+                                                <i class="icon icon-at"></i></a>
+                                            <a class="topic" href="javascript:;" title="插入话题"
+                                               data-hottag="attachbar.topic">
+                                                <i class="icon icon-topic"></i></a></div>
+                                        <!--<div class="qzappwrap"></div>-->
+                                    </div>
+                                    <div class="qz-poster-sync">
+                                        <div class="sync-nuts">
+                                            <a class="sync-qq" href="javascript:;" title="同步至QQ签名">
+                                                <i class="icon icon-qq"></i></a>
+                                            <a class="sync-qq" href="javascript:;" title="同步至腾讯微博">
+                                                <i class="icon icon-weibo"></i></a>
+
+                                            <div class="set-audience">
+                                                <span class="divider">|</span>
+                                                <span class="private-label">可见范围：</span>
+                                                <a href="javascript:;" class="audience" role="button"
+                                                   aria-haspop="true">
+                                                    <span class="text-place">所有人可见</span>
+                                                    <b class="ui-trigbox-b"></b></a>
+                                            </div>
+                                        </div>
+                                        <div class="set-audience-drop none">
+                                            <div class="drop-bg">
+                                                <div class="arr">
+                                                    <b class="in"></b>
+                                                    <b class="out"></b>
+                                                </div>
+                                                <ul class="list">
+                                                    <li class="audience-list"><a href="javascript:;">
+                                                        <i class="icon icon-author-all"></i>
+                                                        <span class="icon-text on">所有人可见</span>
+                                                    </a></li>
+                                                    <li class="audience-list"><a href="javascript:;">
+                                                        <i class="icon icon-author-qq"></i>
+                                                        <span class="icon-text">QQ好友可见</span>
+                                                    </a></li>
+                                                    <li class="audience-list"><a href="javascript:;">
+                                                        <i class="icon icon-author-part"></i>
+                                                        <span class="icon-text">部分好友可见</span>
+                                                    </a></li>
+                                                    <li class="audience-list"><a href="javascript:;">
+                                                        <i class="icon icon-author-part-forbidden"></i>
+                                                        <span class="icon-text">部分好友不可见</span>
+                                                    </a></li>
+                                                    <li class="audience-list"><a href="javascript:;">
+                                                        <i class="icon icon-author-self"></i>
+                                                        <span class="icon-text">仅自己可见</span>
+                                                    </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="op">
+                                        <a href="javascript:;" class="btn-post">
+                                            <span>发表</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-friend">
+                        <div class="feed-friend-hd">
+                            <div class="feed-control-tab">
+                                <a href="javascript:;">
+                                    <span>全部动态</span>
+                                    <i class="ui-icon icon-feed-down"></i>
+                                </a>
+                            </div>
+                            <div class="feed-control-tab-op">
+                                <a title="刷新动态" href="javascript:;" class="item-left"><i class="ui-icon icon-refresh"></i></a>
+                                <span class="line"></span>
+                                <a title="动态设置" href="javascript:;" class="item-right"><i class="ui-icon icon-set"></i></a>
+                            </div>
+                        </div>
+                        <div class="feed-friend-bd">
+                            <ul id="feed-friend-list">
+                                <li class="f-single">
+                                    <div class="f-aside">
+                                        <div class="f-user-pto"><img src="./img/friends/friends-2.jpg" alt=""/></div>
+                                        <div class="f-user-info"></div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="main-sidebar">
+                    <div class="sign">
+                        <div class="sign-inner">
+                            <div class="sign-time" id="signTime">
+                                <span class="sign-week"></span>
+                                <span class="sign-day"></span>
+                            </div>
+                            <a href="javascript:;" class="sign-btn">签到
+                                <span class="sign-clip"></span></a>
+
+                            <div class="sign-count">
+                                <span class="sign-count-num">16</span>
+                                <span class="sign-count-word">Days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-mod right-mod-ad">
+                        <img src="" alt="" id="rightAdvert"/>
+                    </div>
+                    <div class="right-mod">
+                        <div class="hd">
+                            <h3>大家都在看</h3>
+                        </div>
+                        <div class="bd">
+                            <ul id="topicList">
+                                <!--<li class="topic">-->
+                                <!--<a href="javascript:;" class="topic-pic">-->
+                                <!--<img src="http://qzonestyle.gtimg.cn/qzone/space_item/boss_pic/2129_2016_3/1457512751793_80083.png"-->
+                                <!--alt=""/>-->
+                                <!--</a>-->
+
+                                <!--<div class="topic-main">-->
+                                <!--<div class="topic-title"><p>罗生门？唐安琪被曝遭同行女伴泼汽油</p></div>-->
+                                <!--<div class="topic-op"><a href="javascript:;" class="topic-op-link">-->
+                                <!--<i class="ui-icon"></i><span>伤不起</span>  </a>-->
+                                <!--<span class="topic_op_num">7334</span>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+                        <div class="ft" id="pageList">
+                            <a href="javascript:;" class="prev un-click" title="上一页"><i></i></a>
+                            <a href="javascript:;" class="next" title="下一页"><i></i></a>
+                        </div>
+                    </div>
+                    <div class="right-mod visit" id="relationship">
+                        <div class="hd" id="visitHd">
+                            <p>
+                                <a href="javascript:;" class="title">谁看过我</a>
+                                <b>|</b>
+                                <a href="javascript:;">我看过谁</a>
+                                <b>|</b>
+                                <a href="javascript:;">被挡访客</a>
+                            </p>
+                        </div>
+                        <div class="bd" id="visitBox">
+                            <ul class="visitMe" id="visitMe">
+                                <!--<li><a class="avatar"><img src="img/friends/friends-0.jpg" alt="xxx的头像">  <span class="name">aba好友名字</span></a><span class="date">1月1日</span></li>-->
+                            </ul>
+                            <ul class="visitMe none" id="visitYou"></ul>
+                            <div class="visitMe none"><img src="img/img-visitor-blocked.png" alt="看看哪些人被挡在外面"/></div>
+
+                        </div>
+                        <div class="ft">
+                            <div class="page" id="visitPage">
+                                <a href="javascript:;" class="prev un-click" title="上一页"><i></i></a>
+                                <a href="javascript:;" class="next" title="下一页"><i></i></a>
+                            </div>
+                            <div class="visit-info">
+                                <ul>
+                                    <li><p>今日浏览</p><a href="javascript:;" title="今天浏览量：1">1</a></li>
+                                    <li><p>总浏览</p><a href="javascript:;" title="今天浏览量：5688">5688</a></li>
+                                    <li><p>被挡访客</p><a href="javascript:;" title="被挡访问量：228">228</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-top-area" id="go-top">
+        <a href="javascript:;" class="go-top-btn">
+            <i class="go-top-icon"></i>
+            <span class="go-top-text" style="display: none">顶部</span>
+        </a>
+    </div>
+</div>
+<!--表情-->
+<div class="qz-emotion none" id="qz-emotion">
+    <div class="qz-emotion-hd">
+        <ul class="qz-emotion-tab">
+            <li class="active"><a href="javascript:;">常用表情</a></li>
+            <li><a href="javascript:;">头像表情</a></li>
+            <li><a href="javascript:;">趣味表情</a></li>
+            <li><a href="javascript:;">动画</a></li>
+        </ul>
+    </div>
+    <div class="qz-emotion-bd">
+        <div class="qz-emotion-panel">
+            <div class="emotion-preview-default none" id="emotion-preview-default">
+                <img src="" alt=""/>
+                <span></span>
+            </div>
+            <ul class="emotion-list" id="emotion-list"></ul>
+        </div>
+
+    </div>
+    <a class="close" href="javascript:;"><span>×</span></a>
+</div>
+
+<script charset="utf-8" type="text/javascript" src="JSON/top-dropData.js"></script>
+<script charset="utf-8" type="text/javascript" src="JSON/bodyData.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/utils.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/animate.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/topContainer.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/bodyContainer.js"></script>
+<script type="text/javascript">
+    //    var $ajax = function (url, callback) {
+    //        url.indexOf("?") > -1 ? url += "&_=" + Math.random() : url += "?_=" + Math.random();
+    //        var xhr = new XMLHttpRequest();
+    //        xhr.open("get", url, true);
+    //        xhr.onreadystatechange = function () {
+    //            if (xhr.readyState === 4 && /^2\d{2}$/.test(xhr.status)) {
+    //                var con = xhr.responseText;
+    //                con = JSON.parse(con);
+    //                typeof callback === "function" ? callback(con) : null;
+    //            }
+    //        };
+    //        xhr.send(null);
+    //    };
+    //    $ajax("/getTopCss",function(con){
+    //        console.log(con);
+    //
+    //    });
+    //    $ajax("/getBodyCss");
+    //    $ajax("/getJs");
+    //    var count = 2, page = 1, totalPage = 0;
+    //    $ajax("/topicInfo?count="+count+"&page="+page,function(con){
+    //        totalPage=con.totalPage;
+    //
+    //    });
+</script>
+</body>
+</html>

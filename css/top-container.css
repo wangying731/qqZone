@@ -1,0 +1,1145 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    list-style: none;
+    color: #fff;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+    -webkit-user-select: none;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+a, i, input, button, s {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a, a:hover, a:visited, a:active, a:target {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    display: block;
+    border: none;
+}
+
+.none {
+    display: none;
+}
+
+.top-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 41px;
+    background: #1f1f1f;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.top-container .option {
+    position: relative;
+    margin: 0 auto;
+    width: 980px;
+    /*height: 41px;*/
+}
+
+.top-container .option a.logo {
+    float: left;
+    width: 90px;
+    height: 41px;
+    background: url("../img/icenter.32-man160107170542.png") -63px 0;
+    overflow: hidden;
+    /*line-height: 123px;*/
+}
+
+.top-container .option .top-nav {
+    float: left;
+    padding-left: 10px;
+}
+
+.top-container .option .top-nav .nav-list {
+    float: left;
+    position: relative;
+}
+
+.top-container .option .top-nav .nav-list-inner a {
+    position: relative;
+    margin-top: 1px;
+    padding: 0 20px 0 33px;
+    line-height: 40px;
+    cursor: pointer;
+    background: #1f1f1f;
+}
+
+.top-container .option .top-nav .nav-list-inner .selectBg {
+    background-color: #303030;
+}
+
+.top-container .option .top-nav .nav-list-inner .hover {
+    background-color: #303030;
+}
+
+.top-container .option .top-nav .nav-list-inner .stop {
+    background-color: #fff;
+}
+
+.top-container .option .top-nav .nav-list-inner .top-nav-icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+}
+
+.top-container .option .top-nav .nav-list .drop-down {
+    position: absolute;
+    top: 19px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    border-width: 3px;
+    border-style: solid dashed dashed dashed;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    _zoom: 1;
+    /*图片按比例缩放*/
+}
+
+.top-container .option .top-nav .nav-list .drop-over {
+    color: #303030;
+}
+
+.top-container .option .top-nav .nav-list .span-over {
+    color: #303030;
+}
+
+/*个人中心*/
+.top-container .option .top-nav .nav-list-inner .nav-hover {
+    padding: 0 10px 0 33px;
+}
+
+.top-container .option .top-nav .nav-list-inner .icon-iCenter {
+    background: url("../img/35.32-man150806163025.png") no-repeat -740px -150px;
+}
+
+/*我的主页*/
+.top-container .option .top-nav .nav-list .icon-homepage {
+    background: url("../img/35.32-man150806163025.png") no-repeat -765px 0;
+}
+
+.top-container .option .top-nav .nav-list .nav-over-1 {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -156px;
+}
+
+/*好友*/
+.top-container .option .top-nav .nav-list-inner .icon-friend {
+    background: url("../img/35.32-man150806163025.png") no-repeat -740px -175px;
+}
+
+.top-container .option .top-nav .nav-list-inner .nav-over-2 {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -130px;
+}
+
+/*应用商店*/
+
+.top-container .option .top-nav .nav-list-inner .icon-application {
+    background: url("../img/35.32-man150806163025.png") no-repeat -765px -25px;
+}
+
+.top-container .option .top-nav .nav-list-inner .nav-over-3 {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -182px;
+}
+
+/*空间装扮*/
+.top-nav .nav-list-inner .icon-dress-up {
+    background: url("../img/35.32-man150806163025.png") no-repeat -765px -50px;
+}
+
+.top-nav .nav-list-inner .nav-over-4 {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -208px;
+}
+
+.top-nav .nav-list .nav-drop-down {
+    position: absolute;
+    top: 41px;
+    left: -1px;
+    z-index: 10;
+    color: #404040;
+    background: #fff;
+    height: 223px;
+    width: 520px;
+    overflow: hidden;
+}
+
+.top-nav .nav-list .nav-drop-down a {
+    color: #333;
+    cursor: pointer;
+}
+
+.top-nav .nav-list .nav-drop-down a:hover {
+    text-decoration: underline;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area {
+    position: relative;
+    float: left;
+    width: 101px;
+    height: 221px;
+    border-top: #fff 1px solid;
+    border-left: #a6a6a6 1px solid;
+    border-bottom: #a6a6a6 1px solid;
+
+}
+
+.top-nav .nav-list .nav-drop-down .main-area {
+    position: relative;
+    float: left;
+    width: 417px;
+    height: 221px;
+    border-top: #a6a6a6 1px solid;
+    border-right: #a6a6a6 1px solid;
+    border-bottom: #a6a6a6 1px solid;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .homepage-link {
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    width: 50px;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .link-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #e2e2e2;
+    background-color: #fafafa;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .link-icon:hover {
+    border: #93c5ec 1px solid;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .link-text {
+    margin-top: 8px;
+    text-align: center;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area i {
+    margin: 12px auto;
+    height: 24px;
+    width: 24px;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .link-icon .icon-home {
+    background: url("../img/profile-yog151230103345.png") -370px -58px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application {
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    padding-left: 18px;
+    width: 380px;
+    border-left: #e9e9e9 1px solid;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application .main-application-list {
+    margin-top: -20px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li {
+    margin-top: 20px;
+    float: left;
+    width: 75px;
+    height: 73px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .link-app {
+    margin: 8px auto 0;
+    text-align: center;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li i {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    background: url("../img/icenter-man160107170542.png");
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-blog {
+    background-position: 0 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-photo {
+    background-position: -52px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-say {
+    background-position: -104px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-share {
+    background-position: -156px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-time-line {
+    background-position: -208px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-video {
+    background-position: -260px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-music {
+    background-position: -312px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-message-book {
+    background-position: -364px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-personal {
+    background-position: -416px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .main-application li .icon-collect {
+    background-position: -468px 0;
+}
+
+.top-nav .nav-list .friends-drop-down {
+    height: 312px;
+}
+
+.top-nav .nav-list .friends-drop-down .side-area, .top-nav .nav-list .friends-drop-down .main-area {
+    height: 310px;
+    background-color: white
+}
+
+.top-nav .nav-list .friends-drop-down .side-area {
+    width: 77px;
+    padding-left: 0;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .friends-link {
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    width: 50px;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .friends-relation {
+    position: absolute;
+    top: 121px;
+    left: 24px;
+    width: 50px;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .icon-friends {
+    background: url("../img/profile-yog151230103345.png") -552px -58px;
+}
+
+.top-nav .nav-list .nav-drop-down .side-area .icon-relation {
+    margin: 16px auto;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icenter.32-man160107170542.png") -428px -36px;
+}
+
+.top-nav .nav-list .friends-drop-down .main-area {
+    padding-left: 24px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer {
+    margin: 30px 30px 20px 0;
+    padding-left: 30px;
+    border-left: #e9e9e9 1px solid;
+    height: 260px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner {
+    position: relative;
+    height: 100%;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd {
+    height: 37px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd h3 {
+    line-height: 24px;
+    color: #404040;
+    font-weight: normal;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd .friends-search-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 126px;
+    height: 23px;
+    border-radius: 2px;
+    border: 1px solid #e0e0e0;
+    background-color: #fafafa;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd .friends-search-bar:hover {
+    border-color: #fbe7bd;
+    background-color: white
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd .friends-search-bar input {
+    margin-left: 10px;
+    padding: 4px 0;
+    width: 86px;
+    height: 15px;
+    line-height: 15px;
+    border: none;
+    background-color: transparent;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd button {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 30px;
+    height: 25px;
+    text-align: center;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .hd .icon-friend-search {
+    margin-top: 1px;
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    background: url("../img/icenter-man160107170542.png") no-repeat -1103px -36px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list {
+    margin-right: -35px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list li {
+    display: block;
+    margin-right: 25px;
+    float: left;
+    height: 105px;
+    width: 70px;
+    text-align: center;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list li img {
+    height: 70px;
+    width: 70px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list .pic {
+    position: relative;
+    margin-bottom: 8px;
+    height: 70px;
+    width: 70px;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list .name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
+    color: #FFF;
+    border-radius: 0 0 3px 3px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0, 0, 0, .7) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0, rgba(0, 0, 0, .7) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#B2000000');
+    #zoom: 1
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .bd .main-friends-list .number {
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.main-area .friends-outer .friends-inner .bd .main-friends-list .number .icon-relation {
+    display: inline-block;
+    margin-top: 2px;
+    margin-right: 5px;
+    height: 13px;
+    width: 13px;
+    vertical-align: -2px;
+    background: url("../img/icenter.32-man160107170542.png") no-repeat -446px 0;
+}
+
+.top-nav .nav-list .nav-drop-down .main-area .friends-outer .friends-inner .ft {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    white-space: nowrap;
+}
+
+.main-area .friends-outer .friends-inner .ft {
+    display: none;
+    margin-left: 8px;
+}
+
+.main-area .friends-outer .friends-inner .ft a {
+    color: #436383;
+}
+
+.nav-drop-down .main-area .friends-outer .friends-inner .ft .new-friends {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 0 2px;
+    vertical-align: middle;
+    line-height: 1.1;
+    color: #fff;
+    background-color: #d7605c;
+    border-radius: 2px;
+    font-size: 10px;
+    font-family: Tahoma;
+}
+
+.top-container .option .top-nav .nav-list .new-friends-num {
+    position: absolute;
+    top: 7px;
+    left: 18px;
+    padding: 0 2px;
+    line-height: 1.1;
+    color: #fff;
+    background-color: #d7605c;
+    border-radius: 2px;
+    font-size: 10px;
+    font-family: Tahoma;
+}
+
+.top-nav .nav-list .application-drop-down {
+    width: 530px;
+    height: 347px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area {
+    width: 77px;
+    height: 345px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .application-shop {
+    position: absolute;
+    top: 30px;
+    left: 24px;
+    height: 74px;
+    width: 50px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .application-gift {
+    position: absolute;
+    top: 121px;
+    left: 24px;
+    height: 74px;
+    width: 50px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .application-game {
+    position: absolute;
+    top: 212px;
+    left: 24px;
+    height: 74px;
+    width: 50px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .icon-shop {
+    margin: 14px auto;
+    height: 20px;
+    width: 20px;
+    background: url("../img/icenter.32-man160107170542.png") -340px -24px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .icon-gift {
+    background: url("../img/icenter-man160107170542.png") -700px 0;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .icon-prize {
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: -7px;
+    margin: 0;
+    height: 14px;
+    width: 19px;
+    background: url("../img/icenter.32-man160107170542.png") 0 -44px;
+}
+
+.top-nav .nav-list .application-drop-down .side-area .icon-game {
+    background: url("../img/icenter-man160107170542.png") -726px 0;
+}
+
+.top-nav .nav-list .application-drop-down .main-area {
+    width: 451px;
+    height: 345px;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application {
+    left: 23px;
+    padding-left: 9px;
+    width: 410px;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list {
+    margin-top: -20px;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li {
+    position: relative;
+    float: left;
+    margin-top: 20px;
+    width: 80px;
+    height: 73px;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li .icon-wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li .icon-wrapper .icon-popularize {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 15px;
+    background: url("../img/icenter-man160107170542.png") no-repeat -874px 0;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li img {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li .app-name {
+    margin: 8px auto 0;
+    text-align: center;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li .del-btn {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: simsun;
+    font-weight: bold;
+    border: #e2e2e2 1px solid;
+    background-color: #fafafa;
+    border-radius: 1px;
+    _zoom: 1;
+}
+
+.top-nav .nav-list .application-drop-down .main-area .main-application .main-application-list li .del-btn:hover {
+    border: 1px solid #93c5ec;
+}
+
+.top-nav .nav-list .dress-drop-down {
+    width: 548px;
+    height: 299px;
+    background: url("../img/dress/bg.jpg") no-repeat rgb(252, 251, 251);
+}
+
+.top-nav .nav-list .dress-drop-down .side-area {
+    padding-top: 29px;
+    width: 78px;
+    height: 268px;
+    border-top-color: #fcfbfb;
+}
+
+.top-nav .nav-list .dress-drop-down .main-area {
+    padding: 29px 0 0 28px;
+    width: 440px;
+    height: 268px
+}
+
+.top-nav .nav-list .dress-drop-down .side-area .link-icon {
+    margin-left: 28px;
+}
+
+.top-nav .nav-list .dress-drop-down .side-area .link-text {
+    padding-left: 29px;
+    margin-bottom: 18px;
+    text-align: left;
+    color: #404040;
+}
+
+.top-nav .nav-list .dress-drop-down .side-area .icon-fast-dress {
+    background: url("../img/icenter-man160107170542.png") no-repeat -726px -26px;
+}
+
+.top-nav .nav-list .dress-drop-down .side-area .icon-dress-mall {
+    background: url("../img/icenter-man160107170542.png") no-repeat -752px 0;
+}
+
+.dress-drop-down .main-area .dress-box {
+    padding-left: 30px;
+    height: 240px;
+    border-left: 1px solid #ddd;
+}
+
+.dress-drop-down .main-area .dress-box .dress-menu .dress-menu-link {
+    display: inline-block;
+    color: #6d6d6d;
+    vertical-align: 2px;
+}
+
+.dress-drop-down .main-area .dress-box .dress-menu .hover {
+    color: #404040;
+    font-weight: bold;
+}
+
+.dress-drop-down .main-area .dress-box .dress-menu .spe-line {
+    display: inline-block;
+    margin: 0 12px;
+    height: 14px;
+    border-right: 1px solid #cacaca;
+}
+
+.dress-drop-down .main-area .dress-box .dress-list {
+    display: none;
+    margin: 5px 0 0 -5px;
+    overflow: hidden;
+}
+
+.dress-drop-down .main-area .dress-box .dress-select {
+    display: block;
+}
+
+.dress-drop-down .main-area .dress-box .dress-list li {
+    margin: 0 5px 5px 0;
+    float: left;
+    height: 110px;
+    width: 160px;
+}
+
+.dress-drop-down .main-area .dress-box .dress-list .dress-item {
+    display: block;
+    padding: 9px;
+    width: 142px;
+    height: 92px;
+    background: url("../img/dress/dress-item-bg.png") no-repeat;
+    overflow: hidden;
+}
+
+.dress-drop-down .main-area .dress-box .dress-list .dress-item img {
+    width: 142px;
+    height: 92px;
+}
+
+.top-container .option .user-info {
+    padding-left: 10px;
+    float: right;
+    height: 41px;
+    line-height: 41px;
+    cursor: pointer;
+}
+
+.top-container .option .user-info .user-home {
+    float: left;
+    padding: 0 5px;
+    max-width: 86px;
+    height: 41px;
+    line-height: 41px;
+}
+
+.top-container .option .user-info .user-home:hover, .logout_new:hover {
+    background-color: #303030;
+}
+
+.top-container .option .user-info .user-home img {
+    float: left;
+    margin-top: 9px;
+    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+    border-radius: 2px;
+}
+
+.top-container .option .user-info .user-home span {
+    float: left;
+    line-height: 41px;
+    /*把此元素放置在父元素的中部*/
+    vertical-align: middle;
+    display: inline-block;
+    max-width: 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    word-wrap: normal;
+    /*只在允许的断字点换行（浏览器保持默认处理）*/
+}
+
+.top-container .option .user-info .logout_new {
+    float: left;
+    position: relative;
+    margin-left: 4px;
+    width: 26px;
+    height: 41px;
+    line-height: 41px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.top-container .option .user-info .icon-logout {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    margin-left: 5px;
+    height: 16px;
+    width: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px 0;
+}
+
+.top-container .option .user-info .tb_setting {
+    float: left;
+    position: relative;
+    margin-left: 4px;
+    width: 26px;
+    height: 41px;
+    line-height: 41px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-container .option .user-info .tb_setting_i {
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    margin-left: 5px;
+    height: 16px;
+    width: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -26px;
+}
+
+.top-container .option .user-info .setting_hover {
+    background: url("../img/35.32-man160203180152.png") no-repeat -510px 0;
+}
+
+.top-container .option .user-info .tb_setting .user-drop-down {
+    display: none;
+    position: absolute;
+    top: 41px;
+    right: -1px;
+    padding: 4px;
+    width: 108px;
+    height: 181px;
+    color: #404040;
+    background: #fff;
+    border: #a6a6a6 1px solid;
+    overflow: hidden;
+}
+
+.top-container .option .user-info .tb_setting .white-line {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 41px;
+    z-index: 1;
+    width: 26px;
+    height: 1px;
+    font-size: 0;
+    background-color: #fff;
+}
+
+.top-container .option .user-info .tb_setting .user-drop-down .drop-down-setting {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.top-container .option .user-info .tb_setting .user-drop-down a {
+    padding-left: 25px;
+    line-height: 27px;
+    color: #545454;
+}
+
+.top-container .option .user-info .tb_setting .user-drop-down a:hover {
+    background-color: #ececec;
+}
+
+.top-container .option .user-info .vip_setting {
+    float: left;
+    position: relative;
+    margin-left: 4px;
+    width: 26px;
+    height: 41px;
+    line-height: 41px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.top-container .option .user-info .vip_setting .vip_setting_i {
+    margin-top: 12px;
+    margin-left: 2px;
+    height: 19px;
+    width: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: url("../img/qzone-vip.gif") no-repeat;
+}
+
+.top-container .option .user-info .vip_setting .vip-drop-down {
+    display: none;
+    position: absolute;
+    top: 41px;
+    padding: 4px;
+    right: -1px;
+    width: 108px;
+    height: 145px;
+    color: #404040;
+    background: #fff;
+    border: 1px solid #a6a6a6;
+    overflow: hidden;
+}
+
+.top-container .option .user-info .vip_setting .white-line {
+    /*这次的b标签没有设置z-index值，在html中将b标签放在了下拉菜单的下面，则其自然的层级关系会在下拉菜单之上(user_setting下的b做下比较)*/
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 41px;
+    width: 26px;
+    height: 1px;
+    font-size: 0;
+    background-color: #fff;
+}
+
+.top-container .option .user-info .vip_setting .vip-drop-down a {
+    padding-left: 25px;
+    line-height: 27px;
+    _zoom: 1;
+    color: #545454;
+}
+
+.top-container .option .user-info .vip_setting .vip-drop-down a:hover {
+    background-color: #ececec
+}
+
+.top-container .option .top_search {
+    position: relative;
+    float: right;
+    margin-left: 5px;
+    margin-top: 9px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.top-container .option .search_box {
+    padding: 2px 0;
+}
+
+.top-container .option .top_search .search_input {
+    padding: 0 25px 0 5px;
+    height: 20px;
+    width: 105px;
+    border: none;
+    border-radius: 2px;
+    color:#000;
+    background: rgba(255, 255, 255, 0.25);
+}
+.top-container .option .top_search input::-webkit-input-placeholder{
+    color:rgb(208,208,208);
+}
+
+.top-container .option .top_search .search_input:focus {
+    outline: none;
+}
+
+.top-container .option .top_search .search_input_focus {
+    width: 173px;
+    background-color: #fff
+}
+
+.top-container .option .top_search .search_button {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    height: 20px;
+    width: 24px;
+}
+
+.top-container .option .top_search .search_button .icon_search {
+    margin-left: 5px;
+    margin-top: 2px;
+    height: 16px;
+    width: 16px;
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -78px;
+}
+
+.top-container .option .top_search .search_drop_down {
+    position: absolute;
+    top: 24px;
+    padding: 6px 0;
+    width: 201px;
+    height: 168px;
+    color: #404040;
+    border: 1px solid #E0E0E0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.top-container .option .top_search .search_drop_down a {
+    padding: 6px 10px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.top-container .option .top_search .search_drop_down a:hover {
+    background-color: #ececec;
+}
+
+.top-container .option .top_search .search_drop_down .ui-icon {
+    display: inline-block;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.top-container .option .top_search .search_drop_down .icon-ts-special {
+    background: url("../img/icenter.32-man160107170542.png") no-repeat -283px 0;;
+}
+
+.top-container .option .top_search .search_drop_down .icon-ts-qq {
+    background: url("../img/icenter.32-man160107170542.png") no-repeat -187px 0;;
+}
+
+.top-container .option .top_search .search_drop_down .icon-ts-approve {
+    background: url("../img/icenter.32-man160107170542.png") no-repeat -251px 0;
+}
+
+.top-container .option .top_search .search_drop_down .icon-ts-app {
+    background: url("../img/icenter.32-man160107170542.png") no-repeat -219px 0;
+}
+
+.top-container .option .top_search .search_drop_down .search_list .info {
+    display: inline-block;
+    height: 30px;
+    vertical-align: top;
+    line-height: 30px;
+    color: #333;
+}
+
+.top-container .option .music_container {
+    float: right;
+    position: relative;
+    padding: 10px;
+    margin-top: 1px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.top-container .option .select {
+    background-color: #fff;
+}
+
+.top-container .option .music_container .music_panel {
+    -webkit-border-radius: 1px;
+    height: 20px;
+    width: 50px;
+}
+
+.top-container .option .music_container .music_panel .music_play {
+    float: left;
+    width: 22px;
+    height: 20px;
+    text-align: center;
+    margin-right: 1px;
+    background-color: #303030;
+    border-radius: 1px;
+}
+
+.top-container .option .music_container .music_panel .music_play .icon_music_play {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    margin-left: 3px;
+    background: url("../img/35.32-man160203180152.png") no-repeat -458px -286px;
+}
+
+.top-container .option .music_container .music_panel .music_dynamic {
+    float: left;
+    width: 27px;
+    height: 20px;
+    text-align: center;
+    background-color: #303030;
+    border-radius: 1px;
+}
+
+.top-container .option .music_container .music_panel .music_dynamic .icon_music_dynamic {
+    margin-top: -1px;
+    margin-left: +5.5px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/35.32-man160203180152.png") no-repeat -458px -312px;
+}
+
+.top-container .option .music_container .music_panel .music_select {
+    background-color: #f2f2f2;
+}
+
+.top-container .option .music_container .music_panel .music_play .play_select {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -286px;
+}
+
+.top-container .option .music_container .music_panel .music_dynamic .dynamic_select {
+    background: url("../img/35.32-man160203180152.png") no-repeat -484px -312px;
+}
+
+.top-container .speed_btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4.5px;
+    width: 11px;
+    height: 9px;
+    cursor: pointer;
+    background: url("../img/icenter-man160107170542.png") no-repeat -1121px -36px;
+}
+
+
+
