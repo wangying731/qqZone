@@ -193,7 +193,7 @@ utils.getElementsByClass = function getElementsByClass(strClass, context) {
 };
 
 utils.getCss = function getCss(curEle, attr) {
-    var val = reg = null;
+    var val ;var reg = null;
     if ("getComputedStyle"in window) {
         val = window.getComputedStyle(curEle, null)[attr];
     } else {

@@ -148,7 +148,7 @@ var friendsData=[
   },
   {
     qqId:100017,
-    markName:"陈奕纯",
+    markName:"陈奕迅",
     tenName:"十年",
     src:"./img/friends/friends-7.jpg",
     relation:53,

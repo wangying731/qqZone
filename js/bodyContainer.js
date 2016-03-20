@@ -429,7 +429,7 @@
   var content = document.getElementById("content");
   var qzEmotion = document.getElementById("qz-emotion");
   var emClose = utils.getElementsByClass("close", qzEmotion)[0];
-  document.body.onclick = function (e) {
+  document.body.addEventListener("click",function(e){
     e = e || window.event;
     var tar = e.target || e.srcElement;
     if (tar.id === "content"){
@@ -505,9 +505,8 @@
         emot.flag = false;
       }
     }
-  };
 
-
+  },false);
 
 
   var inputSide = document.getElementById("qz-input-side"), inputAtt = utils.getElementsByClass("attach", inputSide)[0], inputAttList = utils.getElementsByClass("attach-item", inputAtt), inputAttBgList = inputAtt.getElementsByTagName("a");
@@ -619,5 +618,79 @@
       }
     })(i);
   }
-
 })();
+
+
+//好友评论
+
+  var friendsList=document.getElementById("feed-friend-list");
+  var oLis=utils.children(friendsList,"li");
+  for(var i=0;i<oLis.length;i++){
+    (function(i){
+      var curFriend=oLis[i];
+      var summary=utils.getElementsByClass("qz_summary",friendsList)[0],summaryUl=summary.getElementsByTagName("ul")[0];
+      var summaryDetail=utils.getElementsByClass("f-detail",summary)[0];
+      var commentsBtn=summaryDetail.getElementsByTagName("a",summaryDetail)[0];
+      var commentsList=utils.getElementsByClass("mod-comments",summaryDetail)[0];
+      var defaultSayBox=document.getElementById("addComment-box");
+      var sayBox=utils.next(defaultSayBox),sayFt=utils.next(sayBox);
+      document.body.addEventListener("click",function(e){
+        e=e||window.event;
+        var tar= e.target|| e.srcElement;
+        if(tar==commentsBtn||tar.id==="addComment-box"){
+          utils.addClass(defaultSayBox,"none");
+          utils.removeClass(sayBox,"none");
+          sayBox.focus();
+          utils.removeClass(sayFt,"none");
+          return;
+        }
+        if(tar.className==="btn-post"){
+          var frg=document.createDocumentFragment();
+          /*<li class="comments-item">
+           <div> <div class="ui-avatar"><img src="img/friends/friends-1.jpg" alt=""/></div>
+           <div class="comments-content"><a class="name" href="javascript:;">那英</a>&nbsp：年少时侯虔诚发过的誓  沉默地沉没在深海里<div class="comments-op"><span>12:30</span><a href="javascript:;" class="hide-clip"></a></div></div></div>
+           </li>*/
+          var str="";
+          var commentTime=new Date(),commentHours=commentTime.getHours(),commentMinutes=commentTime.getMinutes();
+          str+="<li class='comments-item'>";
+          str+="<div> <div class='ui-avatar'><img src='img/friends/friends-0.jpg' alt=''/></div>";
+          str+="<div class='comments-content'><a class='name' href='javascript:;'>王源</a>&nbsp："+sayBox.innerHTML+"<div class='comments-op'><span>"+commentHours+":"+commentMinutes+"</span><a href='javascript:;' class='hide-clip'></a></div></div></div>";
+          str+="</li>";
+          frg.innerHTML=str;console.log(frg);
+          summaryUl.appendChild(frg);
+
+        }
+        //var val=sayBox.innerHTML;
+        //console.log(val.indexOf("2"));
+        //&nbsp;
+       // var reg=/^&nbsp;( )?/g;
+        //var reg=new RegExp(val[0]);
+        //console.log(reg);
+        //val.replace(reg,function(){
+        //  console.log(arguments);
+        //  return "";
+        //});
+        //console.log(val);
+
+       // console.log(reg.test(val)); console.log(val);
+        //sayBox.innerHTML=val;console.log(sayBox.innerHTML.length);
+        if(sayBox.innerHTML===""){
+          utils.removeClass(defaultSayBox,"none");
+          utils.addClass(sayBox,"none");
+          utils.addClass(sayFt,"none");
+        }
+
+
+
+
+
+
+      },false);
+
+
+
+
+    })(i)
+  }
+
+

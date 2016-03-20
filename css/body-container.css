@@ -775,6 +775,7 @@
 
 .layout-body .col-main .main-contain .post-container .qz-poster {
     position: relative;
+    z-index:1;
     margin-bottom: 12px;
     background-color: #fff;
 }
@@ -1996,6 +1997,193 @@ alpha(opacity = 50);
     -moz-border-radius: 4px;
     border-radius: 4px;;
 }
-.main-contain .feed-friend .f-single .f-aside .f-user-info{
+.main-contain .feed-friend .f-single .f-aside .f-user-info a{
+    width: 100%;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+}
+.main-contain .feed-friend .f-single .f-aside .f-user-info a:hover{
+    text-decoration: none;
+}
+.main-contain .feed-friend .f-single .f-aside .f-user-info span{
+    margin-right:10px;
+    color:#8c8c8c;
+}
+.main-contain .feed-friend .f-single .f-wrap{
+    position: relative;
+    word-wrap: break-word;
+}
+.main-contain .feed-friend .f-single .f-wrap .f-info{
+    padding: 0 10px 8px;
+    margin-top: -5px;
+    font-size:14px;
+    line-height: 22px;
+    color:#333;
+}
+.main-contain .feed-friend .f-single .f-wrap .f-info img{
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary{
+    overflow:hidden;
+}
 
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap{
+    background-color: #fafafa;
+    overflow: hidden;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail{
+    padding: 5px 10px;
+    position: relative;
+    border-top:1px solid #e6e6e6;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item{
+    display: inline-block;
+    height: 16px;
+    padding: 6px 8px;
+    margin: 0 8px 0 0;
+    color:#5d7895;
+    vertical-align: middle;
+    border:1px solid #fafafa;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item:hover{
+    background:#fff;
+    border-color:#e6e6e6;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item .ui-icon{
+    display: inline-block;
+    margin-right: 7px;
+    vertical-align: -3px;
+    height:16px;
+    width:16px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item .icon-comment{
+    background:url("../img/35.32-man160203180152.png")no-repeat -224px -104px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item .icon-forward{
+    background:url("../img/35.32-man160203180152.png")no-repeat -224px -130px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item .icon-praise{
+    background:url("../img/35.32-man160203180152.png")no-repeat -224px -26px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item .icon-feed-collect{
+    background:url("../img/35.32-man160203180152.png")no-repeat -224px -182px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item-line{
+    width: 1px;
+    height: 11px;
+    margin-right: 9px;
+    border-right:1px solid #e6e6e6;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 0;
+    vertical-align: -3px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .mod-comments{
+    overflow: hidden;
+    padding: 0 10px 12px;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item{
+    margin-bottom:4px;
+    position: relative;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .ui-avatar{
+    display: inline-block;
+    position: absolute;
+    height:33px;
+    width:30px;
+
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .ui-avatar img{
+    height:30px;
+    width:100%;
+    display: inline-block;
+    border-radius: 2px;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content{
+    position:relative;
+    display: inline-block;
+    margin-left: 40px;
+    line-height:18px;
+    top:-3px;
+    color:#333;
+    overflow: hidden;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content .name{
+    display: inline-block;
+    color:#5d7895;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content .name:hover{
+    text-decoration: underline;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content .comments-op{
+    line-height:18px;
+
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content .comments-op span{
+    display: inline-block;
+    margin-right:10px;
+    color:#8c8c8c;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .comments-item .comments-content .comments-op .hide-clip{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: -3px;
+    background:url("../img/35.32-man160203180152.png")no-repeat -224px -104px;
+
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment{
+    position:relative;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-box{
+    /*position: absolute;*/
+    padding:2px 3px 2px 13px;
+    height: 24px;
+    width:495px;
+    border:1px solid #e6e6e6;
+    background: #fff;
+    color:#8c8c8c;
+    line-height:24px;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-inner{
+    height: 60px;
+    width:495px;
+    line-height: 20px;
+    padding: 3px 8px 5px;
+    background: none;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px 0 rgba(0,0,0,.04);
+    overflow: hidden;
+    overflow-y: auto;
+    color:#333;
+    background:#fff;
+    border:1px solid #e6e6e6;
+    outline:none;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft{
+    overflow: hidden;
+    margin-top: 4px;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .btn-post{
+    float:right;
+    padding: 0 10px;
+    width: 55px;
+    text-align: center;
+    height: 28px;
+    line-height: 28px;
+    border-radius: 2px;
+    vertical-align: middle;
+    border: 1px solid #4798d6;
+    background-color: #5caae6;
+    background-position: 0 0 !important;
+}
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .btn-post span{
+    font-size:14px;
 }

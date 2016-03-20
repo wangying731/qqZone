@@ -33,6 +33,7 @@ html, body {
     position: absolute;
     background-size: cover;
     background: url("img/bg.jpg") no-repeat;
+    overflow:hidden;
 }
 
 #list .zIndex {
