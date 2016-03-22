@@ -2014,6 +2014,9 @@ alpha(opacity = 50);
     margin-right:10px;
     color:#8c8c8c;
 }
+.main-contain .feed-friend .f-single .f-aside .f-user-info .scan{
+    margin-right:0;
+}
 .main-contain .feed-friend .f-single .f-wrap{
     position: relative;
     word-wrap: break-word;
@@ -2050,6 +2053,9 @@ alpha(opacity = 50);
     color:#5d7895;
     vertical-align: middle;
     border:1px solid #fafafa;
+}
+.main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item span{
+    color:#5d7895;
 }
 .main-contain .feed-friend .f-single .f-wrap .qz_summary .f-op-wrap .f-detail .item:hover{
     background:#fff;
@@ -2171,7 +2177,7 @@ alpha(opacity = 50);
     overflow: hidden;
     margin-top: 4px;
 }
-.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .btn-post{
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .comment-btn-post{
     float:right;
     padding: 0 10px;
     width: 55px;
@@ -2184,6 +2190,6 @@ alpha(opacity = 50);
     background-color: #5caae6;
     background-position: 0 0 !important;
 }
-.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .btn-post span{
+.f-single .f-wrap .qz_summary .f-op-wrap .mod-comments .addComment .addComment-ft .comment-btn-post span{
     font-size:14px;
 }
