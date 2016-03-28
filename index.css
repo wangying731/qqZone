@@ -589,12 +589,42 @@ html, body {
     -webkit-transition: 1s;
     transition: 1s;
 }
-.audio-btn{
+#audio-btn{
     position:absolute;
-    height:8%;
-    width:12%;
-    right:1%;
+    height:60px;
+    width:60px;
+    right:3%;
     top:1%;
     z-index:20;
     background:url("img/normalmusic.svg")no-repeat;
+}
+@-webkit-keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes musicMove {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.move {
+    -webkit-transform-origin:center center;
+    transform-origin:center center;
+    -webkit-animation: musicMove 1s linear infinite;
+    animation: musicMove 1s linear infinite;
+
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="main">
-    <div class="audio-btn" id="audio-btn">
+    <div id="audio-btn">
         <audio src="img/bgmusic.mp3" loop preload=none id="mu"></audio></div>
     <ul id="list">
         <li class="zIndex">
@@ -94,15 +94,18 @@
     window.onload = function () {
         oLis[0].firstElementChild.id = "a1";
         mu.play();
+        audioBtn.className="move";
         audioBtn.flag=true;
     };
     audioBtn.addEventListener("touchend", function () {
         if (mu.paused) {//->是否为暂停状态,此时是暂停状态
             mu.play();
             audioBtn.flag=true;
+            audioBtn.className="move";
         } else {
             mu.pause();
             audioBtn.flag=true;
+            audioBtn.className="";
         }
     }, false);
 
