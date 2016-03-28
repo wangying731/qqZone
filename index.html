@@ -133,23 +133,15 @@
             arguments[0].firstElementChild.id = "";
 
         });
-         var s=0;
         if (movePos > 0) {//往下走 找上一张
             this.prevSIndex = (index === 0 ? oLis.length - 1 : index - 1);
             var duration = -winH + movePos;
-            s+=movePos;
         } else if (movePos < 0) {
             this.prevSIndex = (index === oLis.length - 1 ? 0 : index + 1);
             var duration = winH + movePos;
-            s+=movePos;
         }
         this.style.webkitTransform = "translate(0," + movePos + "px)";
-        if(s>=0.5*desH){
-            duration=0;
-            oLis[this.prevSIndex].style.webkitTransform = "translate(0,0)";
-        }else{
-            oLis[this.prevSIndex].style.webkitTransform = "translate(0," + duration + "px)";
-        }
+        oLis[this.prevSIndex].style.webkitTransform = "translate(0," + duration + "px)";
         oLis[this.prevSIndex].className = 'zIndex';
         oLis[this.prevSIndex].style.display = "block";
     }
